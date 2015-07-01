@@ -4,4 +4,9 @@ class WeatherController <ApplicationController
 		render 'finder'
 	end
 
+	def statistics
+		render 'conditions'
+	end
+
+
 end
