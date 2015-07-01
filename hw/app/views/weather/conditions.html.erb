@@ -1,0 +1,23 @@
+<% 
+   require 'open-uri'
+   require 'json'
+
+   location = params["city_name"]
+   json_data = open("http://api.openweathermap.org/data/2.5/weather?q=#{location}&units=imperial").read
+
+   data = JSON.parse(json_data)
+   temp = data["main"]["temp"]
+   description = data["weather"][0]["description"]
+   low = data["main"]["temp_min"]
+   high = data["main"]["temp_max"]
+   %>
+
+
+
+<h1>Current Weather in <%=location %></h1>
+
+<p>Current Temperature: <%=temp%> degrees</p>
+<p>Low: <%=low%> degrees</p>
+<p>High: <%=high%> degrees</p>
+<p>Currently in <%=location%>: <%=description%></p>
+
