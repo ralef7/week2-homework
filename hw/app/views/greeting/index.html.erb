@@ -1,9 +1,9 @@
 
-<% salutation = params["salutation"]%>
+<% salutation = params["salutation"] %>
 
-<%if salutation == nil%>
-<h1>Hello</h1>
+<% if salutation == nil %>
+	<h1>Hello</h1>
 
 <% else %>
-<h1><%=salutation%></h1>
+	<h1><%= salutation %></h1>
 <% end %>

@@ -1,7 +1,7 @@
 class GreetingController <ApplicationController
 
-def index
-	render "index"
+	def index
+		render "index"
 	end
 
 end
